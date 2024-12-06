@@ -7,26 +7,32 @@
 			name="description"
 			content="Get multiple subreddits in separate, customizable lanes" />
 		<title>Browser-based Reddit Client</title>
+		<link rel="stylesheet" href="index.css">
 	</head>
 	<body>
-		<header></header>
+		<header> <p>You are welcome to our browser-based Reddit client that displays multiple subreddits. </p></header>
 		<main>
 			<section class="container">
-				<div>
-					<button>Refresh</button>
-					<button>Delete</button>
+				<div class="action-btn">
+					<button class="refresh">Refresh</button>
+					<button class="delete">Delete All</button>
 				</div>
 				<div>
-					<form>
-						<label for="subreddit">Enter the name of subreddit</label>
-						<input type="text" name="subreddit" />
-						<button>Add subreddit</button>
-					</form>
+					<button id="addSubreddit" class="add-subreddit"> + </button>
+					
+						<form id="form" class="form">
+							<button class="close-btn" id="closeButton">X</button>
+							<label for="subreddit">Enter the subreddit name here:</label>
+							<input class="form-inp" id="input" type="text" name="subreddit" />
+							<button class="form-btn" id="addSubredditButton">Add subreddit</button>
+						</form>
 				</div>
-				<!-- <div></div> -->
+				<div class="lane-wrapper" id="laneWrapper">
+					
+				</div>
 			</section>
 		</main>
 		<footer></footer>
-		<script></script>
+		<script src="app.js"></script>
 	</body>
 </html>
